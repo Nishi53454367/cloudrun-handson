@@ -1,3 +1,13 @@
 FROM node:16.16.0-alpine
+
+# node_modulesインストール
 WORKDIR /usr/src/app
-ENV PORT 8080
+COPY app/package.json ./
+COPY app/yarn.lock ./
+RUN yarn install
+
+# ソースコピー
+COPY app/src ./src
+
+# ビルド
+CMD ["yarn", "build"]
