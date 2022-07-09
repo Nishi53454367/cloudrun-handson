@@ -11,3 +11,6 @@ COPY app/src ./src
 
 # ビルド
 CMD ["yarn", "build"]
+
+# Port公開
+EXPOSE 8080
