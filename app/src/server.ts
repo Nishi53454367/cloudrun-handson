@@ -7,6 +7,14 @@ app.get('/', (req, res) => {
   res.send(`Hello ${name}!`);
 });
 
+app.get('/shop', (req, res) => {
+  res.send('Shop API');
+});
+
+app.get('/notices', (req, res) => {
+  res.send('Notices API');
+});
+
 app.listen(port, () => {
   console.log(`helloworld: listening on port ${port}`);
 });
